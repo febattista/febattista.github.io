@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Donal Duck
+title: Donald Duck
+description: Just Donald.
 permalink: /donald/
 ---
 
-This is just a Donal Duck page.
+This is just a Donald Duck page.
