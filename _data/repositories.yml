@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - febattista
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - coin-or/MibS
+  - coin-or/SYMPHONY
+  - febattista/SDP_lift_and_project
+  - febattista/ADAL-ineq
+

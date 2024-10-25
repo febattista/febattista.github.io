@@ -1,9 +1,10 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"Work in progress":
+  color: "#F67E4B"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Ph.D. Thesis":
+  color: "#4A7BB7"
 
-"Vision":
-  color: "#009f36"
+"4OR":
+  url: https://link.springer.com/journal/10288
+  color: "#5AAE61"
+
