@@ -23,6 +23,6 @@ social: true # includes social icons at the bottom of the page
 
 My research hinges mainly around discrete optimization, spanning both theory and computation.
 
-I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home). 
-I earned my M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.uniroma1.it/en/pagina-strutturale/home). 
+I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home).
+I earned my M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.uniroma1.it/en/pagina-strutturale/home).
 Currently, I am a member of the Computational Optimization Research at the Lehigh `COR@L` group.
