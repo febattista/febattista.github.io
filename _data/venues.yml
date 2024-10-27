@@ -1,9 +1,36 @@
+---
+#-------------------------------------------------
+# Papers
+#-------------------------------------------------
+
 "Work in progress":
-  color: "#F67E4B"
+  color: "#D6604D"
+
+"Preprint":
+  color: "#9970AB"
 
 "Ph.D. Thesis":
   color: "#4A7BB7"
 
 "4OR":
   url: https://link.springer.com/journal/10288
+  color: "#5AAE61"
+
+#-------------------------------------------------
+# Conferences
+#-------------------------------------------------
+
+"ISMP":
+  color: "#D6604D"
+
+"INFORMS":
+  color: "#2c6de2"
+
+"ISCO":
+  color: "#6b1017"
+
+"ODS":
+  color: "#6b1017"
+
+"UNIPV":
   color: "#5AAE61"

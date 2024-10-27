@@ -19,10 +19,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-`Hello world!` Here you will find everything about my <a href='/research/'>research</a> and <a href='/software/'>projects</a>.
+`Hello world!` Welcome to my website, where you can explore everything about my <a href='/research/'>research</a> and <a href='/software/'>projects</a>.
 
-My research hinges mainly around discrete optimization, spanning both theory and computation.
+My research revolves mainly around discrete optimization, encompassing both theoretical and computational
+aspects. My goal as a humble researcher is to bridge the gap between theory and computation by developing open-source software.
 
-I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home).
-I earned my M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.uniroma1.it/en/pagina-strutturale/home).
-Currently, I am a member of the Computational Optimization Research at the Lehigh `COR@L` group.
+I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.uniroma1.it/en/pagina-strutturale/home).
+Currently, I am part of the Computational Optimization Research at the `COR@L` group, Lehigh University.
+
+Italian, born and raised. 🇮🇹
