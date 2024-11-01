@@ -24,7 +24,7 @@ social: true # includes social icons at the bottom of the page
 My research revolves mainly around discrete optimization, encompassing both theoretical and computational
 aspects. My goal as a humble researcher is to bridge the gap between theory and computation by developing open-source software.
 
-I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.uniroma1.it/en/pagina-strutturale/home).
+I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.disim.univaq.it).
 Currently, I am part of the Computational Optimization Research at the `COR@L` group, Lehigh University.
 
 Italian, born and raised. 🇮🇹
