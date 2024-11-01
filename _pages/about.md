@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p><a href='https://engineering.lehigh.edu/ise'>ISE Department</a></p>
-    <p>Mohler Laboratory, Room 472</p>
+    <p>Mohler Laboratory, Room 478</p>
     <p>200 W. Packer Ave.</p>
     <p>Bethlehem, PA 18015-1582</p>
 
