@@ -1,0 +1,54 @@
+---
+---
+<!-- Author -->
+{% assign authors = '' %}
+{%- for author in entry.author_array -%}
+  {% capture authors %}
+    {{ authors }}{{ author.first | slice 0, 0 }}{{ ". " }} {{ author.last }}{{ ", " }} 
+  {% endcapture %}
+{%- endfor -%}
+<!-- Journal/Book title -->
+{% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+{% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+{% if entry.type == 'article' %}
+  {% capture entrytype %}{{ entry.journal }}{% endcapture %}
+{% elsif proceedings contains entry.type %}
+  {% capture entrytype %}In {{ entry.booktitle }}{% endcapture %}
+{% elsif thesis contains entry.type %}
+  {% capture entrytype %}{{"PhD Thesis, "}}{{ entry.school }}{% endcapture %}
+{% else %}
+  {% capture entrytype %}{% endcapture %}
+{% endif %}
+
+<h6 class="bibitem" style="font-size: 0.95rem; text-align: justify;">
+  {{ authors }}
+  <span style="font-weight: bold;">{{ entry.title }}</span>,
+  <span style="font-style: italic;">
+    {{- entrytype -}}
+    {% if entry.address %}
+      {{- ', ' -}}
+      {{- entry.address }}
+    {% endif %}
+  </span>
+  {% if entry.doi %}
+    <a href="https://doi.org/{{ entry.doi }}" class="refs">[ DOI ]</a>
+  {% endif %}
+  {% if entry.bibtex_show %}
+    <a class="bibtex refs">[ BIB ]</a>
+  {% endif %}
+  {% if entry.pdf %}
+    {% if entry.pdf contains '://' %}
+      <a href="{{ entry.pdf }}" class="refs">[ PDF ]</a>
+    {% else %}
+      <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="refs">[ PDF ]</a>
+    {% endif %}
+  {% endif %}
+</h6>
+{% if entry.bibtex_show %}
+  <!-- Hidden bibtex block -->
+  <div class="col-12 bibtex hidden">
+    {% highlight bibtex %}
+    {{- entry.bibtex | hideCustomBibtex -}}
+    {% endhighlight %}
+  </div>
+{% endif %}

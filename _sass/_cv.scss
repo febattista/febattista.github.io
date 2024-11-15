@@ -190,6 +190,79 @@ ul.timeline li::before {
   top: -0.5rem;
 }
 
+/* Add text color to h6 title */
+.cv h6.title {
+  color: var(--global-theme-color);
+}
+
+.cv h6.bibitem {
+  text-align: justify;
+  padding-right: 3rem;
+}
+
+/* bibliography */
+.cv h2.bibliography {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  /* margin-top: 2rem; */
+  text-align: right;
+  font-size: 1rem;
+}
+
+.cv ol.bibliography {
+  list-style: none;
+  padding-left: 0.75rem;
+}
+
+/* DOI, BIB and PDF buttons */
+.cv a.refs {
+  color: var(--global-theme-color) !important;
+  font-size: 0.8rem;
+  padding: 0;
+  margin-left: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0rem;
+}
+
+.cv a.refs:hover {
+  text-decoration: underline;
+}
+
+/* BIB show */
+.cv .hidden {
+  font-size: 0.875rem;
+  max-height: 0px;
+  overflow: hidden;
+  text-align: justify;
+  transition-property: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+
+  p {
+    line-height: 1.4em;
+    margin: 10px;
+  }
+
+  pre {
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 10px;
+  }
+}
+
+.cv .hidden.open {
+  max-height: 100em;
+  transition-property: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: all 0.15s ease;
+}
+
 /*ul.timeline::before {
      content: "●";
      font-size: 1em;
