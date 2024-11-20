@@ -85,6 +85,7 @@ jobs:
         run: |
           pip3 install --upgrade nbconvert
           pip3 install pyyaml
+          pip3 install bibtexparser
           python3 ./_tex/makeLatexCV.py
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
