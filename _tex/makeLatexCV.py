@@ -123,14 +123,14 @@ def buildPDF(sourceTex, targetFile="cv.pdf", targetDir="."):
 if __name__ == "__main__":
             
     # CV in YAML
-    yamlCvPath = os.path.join("..", "_data", "cv.yml")
+    yamlCvPath = os.path.join(".", "_data", "cv.yml")
 
     # BibTeX
-    paperBibPath = os.path.join("..", "_bibliography", "papers.bib")
-    talksBibPath = os.path.join("..", "_bibliography", "talks.bib")
+    paperBibPath = os.path.join(".", "_bibliography", "papers.bib")
+    talksBibPath = os.path.join(".", "_bibliography", "talks.bib")
 
     outSourceCvTex = "Battista_F_CV.tex"
-    targetCvPdf = os.path.join("..", "assets", "pdf")
+    targetCvPdf = os.path.join(".", "assets", "pdf")
 
     template = ModernCVTemplate()
 
