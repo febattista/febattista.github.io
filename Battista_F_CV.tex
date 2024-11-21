@@ -1,0 +1,90 @@
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{burgundy}
+%\renewcommand{\familydefault}{\sfdefault}
+%\nopagenumbers{}
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\footskip}{136.00005pt}
+%\setlength{\hintscolumnwidth}{3cm}
+%\setlength{\makecvheadnamewidth}{10cm}
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+\setmathfont{Latin Modern Math} 
+\else
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+% personal data
+\name{Federico}{Battista}
+\title{Curriculum Vit\ae{}}
+\born{03 September 1995}
+\address{Harold S. Mohler Laboratory 200, West Packer Avenue}{ Bethlehem, PA 18015-1582}{ USA}
+\email{feb223@lehigh.edu}
+\homepage{febattista.github.io}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+% professional experience
+\section{Professional experience}
+\cventry{from 2023.02 to Present}{Postdoctoral Researcher}{\textcolor{violet}{ Lehigh University}, Dept. of Industrial and Systems Engineering}{Bethlehem, PA, USA}{\newline{}Advisor: Prof. Ted Ralphs}{Development of methods for solving general Mixed-Integer Bilevel Linear Programs.}
+\cventry{from 2022.02 to 2022.08}{Visiting Ph.D. Student}{\textcolor{violet}{ Alpen-Adria-Universität}, Institut für Mathematik}{Klagenfurt, Austria}{\newline{}Advisor: Prof. Angelika Wiegele}{Development of Alternating Directions Method of Multipliers for large-scale Semidefinite Programs.}
+% education
+\section{Education}
+\cventry{from 2019.11 to 2023.01}{Ph.D in Operations Research}{\textcolor{violet}{Università degli Studi di Roma "La Sapienza"}}{Rome, Italy}{\textbf{Thesis: }On Semidefinite Lift-and-Project of Combinatorial Optimization Problems}{Supervisors: Prof. Marianna De Santis, Prof. Fabrizio Rossi, Prof. Stefano Smriglio}
+\cventry{from 2017.10 to 2019.07}{Master's degree in Computer Science}{\textcolor{violet}{Università degli Studi dell'Aquila}}{L'Aquila, Italy}{\textbf{Thesis: }Application of the Lovász-Schrijver M+  operator to compact stable set integer programs}{Supervisors: Prof. Fabrizio Rossi, Prof. Stefano Smriglio\newline{}Final mark: 110/110 magna cum laude}
+\cventry{from 2014.09 to 2017.10}{Bachelor's degree in Computer Science}{\textcolor{violet}{Università degli Studi dell'Aquila}}{L'Aquila, Italy}{\textbf{Thesis: }Natural Language Processing and Machine Learning for Conversational Agents}{Supervisor: Prof. Giovanni De Gasperis\newline{}Final mark: 110/110 magna cum laude}
+% software
+\section{Software}
+\cventry{Maintainer}{SDP\_lift\_and\_project}{\footnotesize \texttt{Python,Matlab}}{}{}{\url{https://github.com/febattista/SDP\_lift\_and\_project}\newline{}An open-source software package for formulating and solving via a Cutting Plane method,  Lovász and Schrijver's Lift-and-Project semidefinite relaxations. Although this software  is designed to be as general as possible, allowing the application of the Lovász and  Schrijver's operator to any Linear Programming (LP) formulation, a strong emphasis has been  placed on LP relaxations of the Maximum Stable Set Problem (MSSP).}
+\cventry{Maintainer}{ADAL-ineq}{\footnotesize \texttt{Python,Matlab}}{}{}{\url{https://github.com/febattista/ADAL-ineq}\newline{}An open-source solver for large-scale Semidefinite Programs with inequality constraints, implementing an Alternating Direction Method of Multipliers. ADAL-ineq has several advanced features, such that the ability to provide safe estimate of the optimal solution  value via the computation of multiple valid dual bounds throughout the iterations of the algorithm.}
+\cventry{Contributor}{MibS: Mixed Integer Bilevel Solver}{\footnotesize \texttt{C++}}{}{}{\url{https://github.com/coin-or/MibS}\newline{}A software package for solving mixed integer bilevel programs using branch-and-cut algorithm.  Such programs arise in the analysis of hierarchical decision systems with multiple, independent  decision-makers whose interests are not necessarily aligned.}
+\cventry{Contributor}{SYMPHONY}{\footnotesize \texttt{C}}{}{}{\url{https://github.com/coin-or/SYMPHONY}\newline{}An open-source generic MILP solver, callable library, and extensible  framework for implementing customized solvers for mixed-integer linear programs  (MILPs). SYMPHONY has a number of advanced capabilities, including the ability  to solve multi-objective MILPs, the ability to warm start its solution procedure, and the ability to perform basic sensitivity analyses.  SYMPHONY has has been deployed in a variety of application areas, including  computational biology, wireless telecommunications, supply chain management,  transportation services, and air transportation.}
+% refereed publications
+\section{Refereed publications}
+\cvitem{2024}{F. Battista, M. De Santis, \textbf{Dealing with Inequality Constraints in Large-Scale Semidefinite Relaxations for Graph Coloring and Maximum Clique Problems}, \textit{4OR. A Quarterly Journal of Operations Research}, \url{https://doi.org/10.1007/s10288-024-00569-5}}
+\cvitem{}{F. Battista, T. Ralphs, \textbf{A Branch-and-Cut Algorithm for Mixed-Integer Bilevel Linear Optimization Based on Improving Directions}, \textit{Working paper, COR@L Laboratory, Lehigh University}}
+\cvitem{}{F. Battista, F. Rossi, S. Smriglio, \textbf{Application of the Lov{\'a}sz-Schrijver Operator to Compact Stable Set Integer Programs}, \textit{arXiv preprint arXiv:2407.19290}, \url{https://doi.org/10.48550/arXiv.2407.19290}}
+\cvitem{2023}{F. Battista, \textbf{On Semidefinite Lift-and-Project of Combinatorial Optimization Problems}, \textit{Ph.D. Thesis, Universit{\`a} di Roma Sapienza}, \url{https://hdl.handle.net/11573/1668673}}
+% technical reports and publications in review
+\section{Technical reports and publications in review}
+\cvitem{2024}{F. Battista, T. Ralphs, \textbf{A Branch-and-Cut Algorithm for Mixed-Integer Bilevel Linear Optimization Based on Improving Directions}, \textit{Working paper, COR@L Laboratory, Lehigh University}}
+\cvitem{}{F. Battista, F. Rossi, S. Smriglio, \textbf{Application of the Lov{\'a}sz-Schrijver Operator to Compact Stable Set Integer Programs}, \textit{arXiv preprint arXiv:2407.19290}, \url{https://doi.org/10.48550/arXiv.2407.19290}}
+% conference presentations and talks
+\section{Conference presentations and talks}
+\cvitem{2024}{F. Battista, T. Ralphs, \textbf{A Branch-and-Cut Algorithm for Mixed-Integer Bilevel Linear Optimization Based on Improving Directions}, \textit{International Symposium on Mathematical Programming, Montreal, Canada}}
+\cvitem{2023}{F. Battista, T. Ralphs, \textbf{Exploiting Dual Functions in Mixed Integer Bilevel Linear Programs}, \textit{INFORMS Annual Meeting, Phoenix, AZ}}
+\cvitem{2022}{F. Battista, M. De Santis, F. Rossi, S. Smriglio, \textbf{On Semidefinite Lift-and-Project Relaxations for Combinatorial Optimization Problems}, \textit{University of Pavia, Pavia, Italy}}
+\cvitem{}{F. Battista, F. Rossi, S. Smriglio, \textbf{Application of the Lov{\'a}sz-Schrijver Operator to Representative Formilation for Graph Coloring Problem}, \textit{International Symposium on Combinatorial Optimization, Paris, France}}
+\cvitem{2021}{F. Battista, M. De Santis, \textbf{Dealing with Inequalities in Large Scale {{Semidefinite Programs}}}, \textit{International Conference on Optimization and Decision Science, Rome, Italy}}
+\end{document}
