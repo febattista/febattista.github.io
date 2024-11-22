@@ -146,8 +146,9 @@ if __name__ == "__main__":
     talks  = Bibliography(talksBibPath)
     
     orKwrds = ['preprint', 'wip']
+    andKwrds = ['published']
 
-    data['refPubs'] = papers.getBibItems(orderByYear=True)
+    data['refPubs'] = papers.getBibItems(orderByYear=True, andKwrds=andKwrds)
     data['wipPubs'] = papers.getBibItems(orderByYear=True, orKwrds=orKwrds)
 
     data['talks']   = talks.getBibItems(orderByYear=True)
