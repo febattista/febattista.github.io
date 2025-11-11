@@ -1,29 +1,64 @@
 ---
 ---
+{% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+{% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+<!-- fede: entry.type collides with type field in @techreport -->
+{% assign techreport = 'working,paper,preprint,arxiv' | split: ',' %}
+<!-- check for techreport -->
+{% assign is_techreport = false %}
+{% assign is_phdthesis = false %}
+{% assign is_proceedings = false %}
+{% assign entry_type_lc = entry.type | downcase %}
+{% assign this_abbr = null %}
+{% for word in techreport %}
+  {% if entry_type_lc contains word %}
+    {% assign is_techreport = true %}
+  {% endif %}
+{% endfor %}
+
+
+{% if proceedings contains entry.type %}
+  {% assign is_proceedings = true %}
+{% endif %}
+
+{% if thesis contains entry.type %}
+  {% assign is_phdthesis = true %}
+{% endif %}
+
+
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
+        {% assign this_abbr = entry.abbr %}
+      {% elsif is_techreport and (entry.doi or entry.url) %}
+        {% assign this_abbr = "Preprint" %}
+      {% elsif is_techreport %}
+        {% assign this_abbr = "Working Paper" %}
+      {% elsif is_phdthesis %}
+        {% assign this_abbr = "Ph.D. Thesis" %}
+      {% elsif is_proceedings %}
+        {% assign this_abbr = "Proceedings" %}
+      {% endif %}
+      {%- if site.data.venues[this_abbr] -%}
+        {% assign venue_style = null %}
+        {% if site.data.venues[this_abbr].color != blank %}
+          {% assign venue_style = site.data.venues[this_abbr].color | prepend: 'style="background-color:' | append: '"' %}
+        {%- endif -%}
+        <abbr
+          class="badge rounded w-100"
+          {% if venue_style %}
+            {{ venue_style }}
+          {% endif -%}
+        >
+          {% if site.data.venues[this_abbr].url %}
+            <a href="{{ site.data.venues[this_abbr].url }}">{{ this_abbr }}</a>
+          {% else %}
+            <div>{{- this_abbr -}}</div>
+          {% endif %}
+        </abbr>
+      {% else %}
+        <abbr class="badge rounded w-100">{{ this_abbr }}</abbr>
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
@@ -146,10 +181,11 @@
     </div>
 
     <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+    
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+    {% elsif is_techreport %}
+        {% capture entrytype %}<em>{{ entry.type }}, {{ entry.institution }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
@@ -194,13 +230,13 @@
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {% elsif entry.url %}
+        <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
-      {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-      {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
           <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
@@ -350,14 +386,12 @@
       </div>
     {% endif %}
 
-    {% if entry.bibtex_show %}
       <!-- Hidden bibtex block -->
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
         {% endhighlight %}
       </div>
-    {% endif %}
 
     {% if entry.video and site.enable_video_embedding %}
       <!-- Hidden video block -->

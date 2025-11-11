@@ -53,58 +53,66 @@ education:
     advisor: "Prof. Giovanni De Gasperis"
     grade: "110/110 magna cum laude"
 
-software:
-  - name: "SDP_lift_and_project"
-    url: "https://github.com/febattista/SDP_lift_and_project"
-    role: "Maintainer"
-    summary: >
-      An open-source software package for formulating and solving via a Cutting Plane method, 
-      Lovász and Schrijver's Lift-and-Project semidefinite relaxations. Although this software 
-      is designed to be as general as possible, allowing the application of the Lovász and 
-      Schrijver's operator to any Linear Programming (LP) formulation, a strong emphasis has been 
-      placed on LP relaxations of the Maximum Stable Set Problem (MSSP).
-    highlights:
-      - "Python"
-      - "Matlab"
+service:
+  editorial board:
+    - title: "Operations Research"
+      description: "Associate Editor (Data, Software, and Computation)"
+      url: "https://pubsonline.informs.org/journal/opre"
+      startDate: "2025-10-01"
+      endDate: "Present"
 
-  - name: "ADAL-ineq"
-    url: "https://github.com/febattista/ADAL-ineq"
-    role: "Maintainer"
-    summary: >
-      An open-source solver for large-scale Semidefinite Programs with inequality constraints,
-      implementing an Alternating Direction Method of Multipliers. ADAL-ineq has several
-      advanced features, such that the ability to provide safe estimate of the optimal solution 
-      value via the computation of multiple valid dual bounds throughout the iterations of the
-      algorithm.
+# software:
+#   - name: "SDP_lift_and_project"
+#     url: "https://github.com/febattista/SDP_lift_and_project"
+#     role: "Maintainer"
+#     summary: >
+#       An open-source software package for formulating and solving via a Cutting Plane method, 
+#       Lovász and Schrijver's Lift-and-Project semidefinite relaxations. Although this software 
+#       is designed to be as general as possible, allowing the application of the Lovász and 
+#       Schrijver's operator to any Linear Programming (LP) formulation, a strong emphasis has been 
+#       placed on LP relaxations of the Maximum Stable Set Problem (MSSP).
+#     highlights:
+#       - "Python"
+#       - "Matlab"
 
-    highlights:
-      - "Python"
-      - "Matlab"
+#   - name: "ADAL-ineq"
+#     url: "https://github.com/febattista/ADAL-ineq"
+#     role: "Maintainer"
+#     summary: >
+#       An open-source solver for large-scale Semidefinite Programs with inequality constraints,
+#       implementing an Alternating Direction Method of Multipliers. ADAL-ineq has several
+#       advanced features, such that the ability to provide safe estimate of the optimal solution 
+#       value via the computation of multiple valid dual bounds throughout the iterations of the
+#       algorithm.
 
-  - name: "MibS: Mixed Integer Bilevel Solver"
-    url: "https://github.com/coin-or/MibS"
-    role: "Contributor"
-    summary: >
-      A software package for solving mixed integer bilevel programs using branch-and-cut algorithm. 
-      Such programs arise in the analysis of hierarchical decision systems with multiple, independent 
-      decision-makers whose interests are not necessarily aligned.
-    highlights:
-      - "C++"
+#     highlights:
+#       - "Python"
+#       - "Matlab"
 
-  - name: "SYMPHONY"
-    url: "https://github.com/coin-or/SYMPHONY"
-    role: "Contributor"
-    summary: >
-      An open-source generic MILP solver, callable library, and extensible 
-      framework for implementing customized solvers for mixed-integer linear programs 
-      (MILPs). SYMPHONY has a number of advanced capabilities, including the ability 
-      to solve multi-objective MILPs, the ability to warm start its solution procedure,
-      and the ability to perform basic sensitivity analyses. 
-      SYMPHONY has has been deployed in a variety of application areas, including 
-      computational biology, wireless telecommunications, supply chain management, 
-      transportation services, and air transportation.
-    highlights:
-      - "C"
+#   - name: "MibS: Mixed Integer Bilevel Solver"
+#     url: "https://github.com/coin-or/MibS"
+#     role: "Contributor"
+#     summary: >
+#       A software package for solving mixed integer bilevel programs using branch-and-cut algorithm. 
+#       Such programs arise in the analysis of hierarchical decision systems with multiple, independent 
+#       decision-makers whose interests are not necessarily aligned.
+#     highlights:
+#       - "C++"
+
+#   - name: "SYMPHONY"
+#     url: "https://github.com/coin-or/SYMPHONY"
+#     role: "Contributor"
+#     summary: >
+#       An open-source generic MILP solver, callable library, and extensible 
+#       framework for implementing customized solvers for mixed-integer linear programs 
+#       (MILPs). SYMPHONY has a number of advanced capabilities, including the ability 
+#       to solve multi-objective MILPs, the ability to warm start its solution procedure,
+#       and the ability to perform basic sensitivity analyses. 
+#       SYMPHONY has has been deployed in a variety of application areas, including 
+#       computational biology, wireless telecommunications, supply chain management, 
+#       transportation services, and air transportation.
+#     highlights:
+#       - "C"
 
 languages:
   - language: "Italian"

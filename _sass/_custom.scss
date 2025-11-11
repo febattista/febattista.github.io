@@ -1,0 +1,27 @@
+/*******************************************************************************
+ * Custom styles.
+ ******************************************************************************/
+
+
+
+/* Compact cv card list */
+.cv .card .list-group-item.compact {
+    padding: 0.1rem 1rem;
+    border: none;
+}
+
+
+/* Nested list delimiters */
+.cv h2.nested-list {
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* Highlight text */
+.highligth {
+    color: var(--global-theme-color);
+    font-weight: bold;
+}

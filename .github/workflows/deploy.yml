@@ -78,16 +78,6 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
-      - name: Install Dependencies for CV compiler 📜
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-full latexmk
-      - name: Build CV PDF
-        run: |
-          pip3 install --upgrade nbconvert
-          pip3 install pyyaml
-          pip3 install --pre bibtexparser
-          python3 ./_tex/makeLatexCV.py
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

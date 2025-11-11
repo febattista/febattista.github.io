@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Researcher at <a href='https://www2.lehigh.edu'>Lehigh University</a>.
 
 profile:
   align: right
@@ -15,16 +14,15 @@ profile:
     <p>Bethlehem, PA 18015-1582</p>
 
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+# selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-`Hello world!` Welcome to my website, where you can explore everything about my <a href='/research/'>research</a> and <a href='/software/'>projects</a>.
+`Hello world!` I am a postdoctoral researcher at <a href='https://www2.lehigh.edu'>Lehigh University</a>.
 
-My research revolves mainly around discrete optimization, encompassing both theoretical and computational
-aspects. My goal as a humble researcher is to bridge the gap between theory and computation by developing open-source software.
+My research lies at the intersection of theory, methodology, and computation in 
+<span class="highligth">mixed-integer programming</span> and <span class="highligth">combinatorial optimization</span>, with 
+particular focus on analyzing complex problems arising from various real-world applications.
 
 I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.disim.univaq.it).
 Currently, I am part of the Computational Optimization Research at the `COR@L` group, Lehigh University.
-
-Italian, born and raised. 🇮🇹

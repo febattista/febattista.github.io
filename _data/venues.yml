@@ -3,13 +3,16 @@
 # Papers
 #-------------------------------------------------
 
-"Work in progress":
+"Working Paper":
   color: "#D6604D"
 
 "Preprint":
   color: "#9970AB"
 
 "Ph.D. Thesis":
+  color: "#4A7BB7"
+
+"Proceedings":
   color: "#4A7BB7"
 
 "4OR":

@@ -66,10 +66,10 @@ def writeToFile(filename, data, template):
             file.write(template.getBeginDocument())
             file.write(template.getProfessionalExperience(data['professional experience']))
             file.write(template.getEducation(data['education']))
-            file.write(template.getSoftware(data['software']))
             file.write(template.getPublications(data['refPubs'], secTitle='refereed publications'))
             file.write(template.getPublications(data['wipPubs'], secTitle='technical reports and publications in review'))
             file.write(template.getPublications(data['talks'], secTitle='conference presentations and talks'))
+            file.write(template.getSoftware(data['software']))
             file.write(template.getEndDocument())
 
 def buildPDF(sourceTex, targetFile="cv.pdf", targetDir="."):

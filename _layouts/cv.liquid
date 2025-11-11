@@ -41,6 +41,8 @@ layout: default
                 {% include resume/education.liquid %}
               {% when 'professional experience' %}
                 {% include resume/work.liquid %}
+              {% when 'service' %}
+                  {% include resume/nested_list.liquid %}
               {% when 'software' %}
                 {% include resume/software.liquid %}
               {% when 'volunteer' %}
@@ -67,7 +69,7 @@ layout: default
           </div>
         </div>
       {% endfor %}
-      <a class="anchor" id="refereed"></a>
+      {% comment %} <a class="anchor" id="refereed"></a>
       <div class="card mt-3 p-3">
         <h5 class="card-title font-weight-medium">Refereed Publications</h5>
         <div>
@@ -87,7 +89,7 @@ layout: default
         <div>
           {% bibliography -f talks -T bib_cv -q @* %}
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </article>
 </div>

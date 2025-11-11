@@ -21,7 +21,7 @@
 {% endif %}
 
 <h6 class="bibitem" style="font-size: 0.95rem; text-align: justify;">
-  {{ authors }}
+  - {{ authors }}
   <span style="font-weight: bold;">{{ entry.title }}</span>,
   <span style="font-style: italic;">
     {{- entrytype -}}
@@ -30,12 +30,15 @@
       {{- entry.address }}
     {% endif %}
   </span>
+
   {% if entry.doi %}
     <a href="https://doi.org/{{ entry.doi }}" class="refs">[ DOI ]</a>
+  {% elsif entry.url %}
+    <a href="{{ entry.url }}" class="refs">[ DOI ]</a>
   {% endif %}
-  {% if entry.bibtex_show %}
+
     <a class="bibtex refs">[ BIB ]</a>
-  {% endif %}
+
   {% if entry.pdf %}
     {% if entry.pdf contains '://' %}
       <a href="{{ entry.pdf }}" class="refs">[ PDF ]</a>
@@ -44,11 +47,10 @@
     {% endif %}
   {% endif %}
 </h6>
-{% if entry.bibtex_show %}
-  <!-- Hidden bibtex block -->
-  <div class="col-12 bibtex hidden">
-    {% highlight bibtex %}
-    {{- entry.bibtex | hideCustomBibtex -}}
-    {% endhighlight %}
-  </div>
-{% endif %}
+
+<!-- Hidden bibtex block -->
+<div class="col-12 bibtex hidden">
+  {% highlight bibtex %}
+  {{- entry.bibtex | hideCustomBibtex -}}
+  {% endhighlight %}
+</div>
