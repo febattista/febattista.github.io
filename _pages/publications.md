@@ -10,7 +10,6 @@ nav_order: 2
 The methodologies in my research span several sub-fields of optimization with the following main thrusts: 
 <span class="highligth">bilevel</span>, <span class="highligth">multi-stage stochastic</span> and <span class="highligth">multiobjective</span> mixed-integer linear problems;
 and <span class="highligth">graph optimization problems</span>.
-My goal as a researcher is to bridge the gap between theory and computation by developing open-source software.
 
 Here are listed all my publications and my most recent work in progress.
 

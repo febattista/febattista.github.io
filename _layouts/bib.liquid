@@ -8,6 +8,7 @@
 {% assign is_techreport = false %}
 {% assign is_phdthesis = false %}
 {% assign is_proceedings = false %}
+{% assign is_software = false %}
 {% assign entry_type_lc = entry.type | downcase %}
 {% assign this_abbr = null %}
 {% for word in techreport %}
@@ -25,6 +26,10 @@
   {% assign is_phdthesis = true %}
 {% endif %}
 
+{% if entry.keywords contains "software" %}
+  {% assign is_software = true %}
+{% endif %}
+
 
 <div class="row">
   {% if site.enable_publication_thumbnails %}
@@ -39,6 +44,8 @@
         {% assign this_abbr = "Ph.D. Thesis" %}
       {% elsif is_proceedings %}
         {% assign this_abbr = "Proceedings" %}
+      {% elsif is_software %}
+        {% assign this_abbr = entry.note %}
       {% endif %}
       {%- if site.data.venues[this_abbr] -%}
         {% assign venue_style = null %}
@@ -215,7 +222,9 @@
       {{ periodical | strip }}
     </div>
     <div class="periodical">
-      {{ entry.note | strip }}
+      {% if entry.is_software == false %}
+        {{ entry.note | strip }}
+      {% endif %}
     </div>
 
     <!-- Links/Buttons -->
