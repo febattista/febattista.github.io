@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 
 `Hello world!` I am a Postdoctoral Researcher at <a href='https://www.usc.edu'>University of Southern California</a>.
 
-Previously, I was a Postdoctoral Researcher at ISE Department of Lehigh University, under the supervision of Prof. Ted Ralphs. I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.disim.univaq.it). 
+Previously, I was a Postdoctoral Researcher at ISE Department of [Lehigh University](https://engineering.lehigh.edu/ise), under the supervision of Prof. Ted Ralphs. I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.disim.univaq.it). 
 
 My research lies at the intersection of theory, methodology, and computation in 
 <span class="highligth">mixed-integer programming</span> and <span class="highligth">combinatorial optimization</span>, with 
