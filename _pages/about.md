@@ -21,6 +21,9 @@ social: true # includes social icons at the bottom of the page
 
 Previously, I was a Postdoctoral Researcher at ISE Department of [Lehigh University](https://engineering.lehigh.edu/ise), under the supervision of Prof. Ted Ralphs. I hold a Ph.D in Operations Research from [University of Rome Sapienza](https://www.uniroma1.it/en/pagina-strutturale/home) and an M.S. and B.S. in Computer Science from [University of L'Aquila](https://www.disim.univaq.it). 
 
-My research lies at the intersection of theory, methodology, and computation in 
-<span class="highligth">mixed-integer programming</span> and <span class="highligth">combinatorial optimization</span>, with 
-particular focus on analyzing complex problems arising from various real-world applications.
+My research lies at the intersection of theory, algorithms, and computation in
+<span class="highligth">discrete optimization</span>, with a focus on the development of exact
+solution methods. In particular, I work on <span class="highligth">branch and cut</span> for complex
+<span class="highligth">mixed-integer linear problems</span>, including those arising in
+<span class="highligth">bilevel optimization</span> and <span class="highligth">combinatorial optimization</span>,
+and on the development of open-source tools for the community.
